@@ -1,16 +1,16 @@
 package br.com.etecia.mybooks;
 
-public class book {
+public class Book {
     private String titulo;
     private String categoria;
     private String descricao;
     private int miniatura;
 
     //Criando os construtores alt+insert
-    public book() {
+    public Book() {
     }
 
-    public book(String titulo, String categoria, String descricao, int miniatura) {
+    public Book(String titulo, String categoria, String descricao, int miniatura) {
         this.titulo = titulo;
         this.categoria = categoria;
         this.descricao = descricao;

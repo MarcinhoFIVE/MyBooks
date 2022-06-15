@@ -1,18 +1,36 @@
 package br.com.etecia.mybooks;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+
+    private Context context;
+    private List<Book> book;
+
+    public MyAdapter() {
+    }
+
+    public MyAdapter(Context context, List<Book> book) {
+        this.context = context;
+        this.book = book;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.modelo_card_books, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
@@ -22,6 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return 0;
     }
 
@@ -30,11 +49,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemView = View.inflate(itemView.getContext(), R.layout.activity_main, null);
             TextView textBook = itemView.findViewById(R.id.tvModelBook);
+            ImageView imageBook =itemView.findViewById(R.id.ivModelBook);
         }
 
     }
-
 
 }
