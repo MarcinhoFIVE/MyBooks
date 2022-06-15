@@ -29,6 +29,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView = View.inflate(itemView.getContext(), R.layout.activity_main, null);
+
         }
 
     }

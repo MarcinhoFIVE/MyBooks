@@ -28,6 +28,5 @@ public class MainActivity extends AppCompatActivity {
         //carregar o adaptador ao RecyclerView
         rvListaLivros.setAdapter(myAdapter);
 
-
     }
 }
