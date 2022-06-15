@@ -2,6 +2,7 @@ package br.com.etecia.mybooks;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,7 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemView = View.inflate(itemView.getContext(), R.layout.activity_main, null);
-
+            TextView textBook = itemView.findViewById(R.id.tvModelBook);
         }
 
     }
